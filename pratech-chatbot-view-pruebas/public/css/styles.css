@@ -1,0 +1,368 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto:300,400,700");
+.wc-header {
+  display: none !important;
+}
+
+.wc-message-from-me .wc-message-content {
+  background: #d9d9d9;
+  color: #000 !important;
+  border-radius: 5px !important;
+  box-shadow: none;
+  font-family: "Roboto", sans-serif;
+}
+.wc-message-from-me svg.wc-message-callout path {
+  fill: #d9d9d9 !important;
+}
+.wc-message-from-me.wc-message-from span {
+  display: none !important;
+}
+
+.wc-message-from-bot .wc-message-content {
+  background-color: #fff !important;
+  border-radius: 5px !important;
+  min-width: 325px;
+  box-shadow: none;
+  color: #000;
+  font-family: "Roboto", sans-serif;
+}
+.wc-message-from-bot .wc-message-content strong {
+  font-weight: 700;
+  color: #ee1c25;
+}
+.wc-message-from-bot .wc-message-content:after {
+  content: "" !important;
+  clear: both !important;
+  display: table !important;
+}
+.wc-message-from-bot .wc-message-content > div > .wc-list > .wc-card {
+  width: auto !important;
+  background-color: transparent !important;
+  border: 0 !important;
+  padding: 8px 8px 0 !important;
+}
+.wc-message-from-bot .wc-message-content > div > .wc-list > .wc-card.video iframe {
+  position: relative !important;
+}
+.wc-message-from-bot .wc-message-content > div > .wc-list > .wc-card > .ac-container {
+  padding: 0 !important;
+}
+.wc-message-from-bot .wc-message-content > div > .wc-list > .wc-card h1 {
+  font-family: "Roboto", sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  color: #000;
+}
+.wc-message-from-bot .wc-message-content > div > .wc-list > .wc-card h1,
+.wc-message-from-bot .wc-message-content > div > .wc-list > .wc-card p {
+  font-family: "Roboto", sans-serif;
+  margin-bottom: 8px !important;
+  color: #000;
+}
+.wc-message-from-bot .wc-message-content > div > .wc-list > .wc-card ul.wc-card-buttons li {
+  list-style-type: none;
+  width: 49% !important;
+  float: left !important;
+  height: 35px !important;
+  position: relative !important;
+  margin-bottom: 8px !important;
+}
+.wc-message-from-bot .wc-message-content > div > .wc-list > .wc-card ul.wc-card-buttons li:nth-child(2n+0) {
+  float: right !important;
+}
+.wc-message-from-bot .wc-message-content > div > .wc-list > .wc-card ul.wc-card-buttons li > button {
+  position: absolute !important;
+  width: 100% !important;
+  height: 100% !important;
+  padding: 0 5px !important;
+  top: 50% !important;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-size: 12px !important;
+  transform: translateY(-50%) !important;
+  border: 1px solid #ee1c25 !important;
+  color: #000 !important;
+  border-radius: 20px;
+}
+.wc-message-from-bot .wc-message-content > div > .wc-list > .wc-card ul.wc-card-buttons li > button:hover {
+  border-color: #ee1c25 !important;
+  background-color: #ee1c25 !important;
+  color: #fff !important;
+}
+.wc-message-from-bot svg.wc-message-callout path {
+  fill: #fff !important;
+}
+
+.wc-console {
+  border: 0 !important;
+  height: 50px !important;
+  background-color: #eeeeee !important;
+}
+.wc-console .wc-textbox {
+  bottom: 5px;
+  left: 10px !important;
+  right: 10px;
+  top: 5px;
+}
+.wc-console input[type=file]#wc-upload-input {
+  display: none !important;
+}
+.wc-console label.wc-upload {
+  display: none !important;
+}
+.wc-console svg {
+  margin: 16px !important;
+}
+
+.chatbot-float-pratech {
+  border-radius: 30px 0 0 30px;
+  border-top: 2px solid #ee1c25;
+  border-bottom: 2px solid #ee1c25;
+  border-left: 2px solid #ee1c25;
+  position: fixed;
+  width: 100px;
+  height: 91px;
+  top: 20%;
+  right: 0;
+  background-color: #fff;
+  color: #fff;
+  text-align: center;
+  font-weight: 700;
+  cursor: pointer;
+  vertical-align: middle;
+  display: block;
+  pointer-events: all;
+  padding-top: 10px;
+}
+.chatbot-float-pratech:hover {
+  background-color: #d9d9d9;
+}
+.chatbot-float-pratech i.fa {
+  font-size: 23px;
+  margin-top: 3px;
+  margin-bottom: 2px;
+}
+
+.chatbot-drag-pratech {
+  width: 400px;
+  height: 470px;
+  background-color: #fff;
+  font-family: "Roboto", sans-serif;
+  position: fixed;
+  bottom: 100px;
+  right: 100px;
+  z-index: 9999999;
+  display: none;
+  pointer-events: all;
+  border-radius: 18px;
+  -webkit-box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.2);
+}
+@media (max-width: 1200px) {
+  .chatbot-drag-pratech {
+    width: 400px;
+    right: 60px;
+    bottom: 50%;
+    height: 470px;
+    transform: translateY(50%);
+  }
+}
+@media (max-width: 768px) {
+  .chatbot-drag-pratech {
+    width: 95%;
+    height: 400px;
+    right: 0;
+    bottom: 50%;
+    left: 50%;
+    transform: translateY(50%) translateX(-50%);
+  }
+}
+.chatbot-drag-pratech.show {
+  display: block;
+}
+.chatbot-drag-pratech-header {
+  width: 100%;
+  height: 80px;
+  background-color: #fff;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 8px 8px 0 0;
+  cursor: move;
+  z-index: 1;
+}
+.chatbot-drag-pratech-header .-info-title {
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  padding-left: 90px;
+  box-sizing: border-box;
+}
+.chatbot-drag-pratech-header .-info-title .title-chat {
+  font-size: 21px;
+  color: #ee1c25;
+  font-weight: 700;
+}
+.chatbot-drag-pratech-header .-info-title .title-chat .lighter {
+  font-weight: 300;
+  color: #838383;
+  font-size: 18px;
+}
+@media (max-width: 768px) {
+  .chatbot-drag-pratech-header .-info-title .title-chat {
+    font-size: 17px;
+  }
+}
+.chatbot-drag-pratech-header .-info-title p.p1 {
+  font-size: 12px;
+  font-weight: 300;
+  margin-top: -1px;
+  color: #fff;
+  margin-bottom: 0;
+}
+.chatbot-drag-pratech-header .-info-title .avatar-img {
+  background-color: #fff;
+  width: 80px;
+  height: 80px;
+  border-radius: 8px 0 0 0;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 0;
+}
+.chatbot-drag-pratech-header .-info-title .avatar-img img {
+  width: 50%;
+  top: 20%;
+  position: relative;
+  left: 31%;
+}
+.chatbot-drag-pratech-header .-info-title .icon {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: auto;
+  height: 40px;
+  text-align: center;
+}
+.chatbot-drag-pratech-header .-info-title .icon ul.list-actions {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+.chatbot-drag-pratech-header .-info-title .icon ul.list-actions li {
+  float: left;
+  border-radius: 50%;
+  background-color: #eeeeee;
+}
+.chatbot-drag-pratech-header .-info-title .icon ul.list-actions li:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+.chatbot-drag-pratech-header .-info-title .icon ul.list-actions li a {
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  display: block;
+  color: #838383;
+  opacity: 0.5;
+  text-decoration: none;
+}
+.chatbot-drag-pratech-body {
+  position: relative;
+  height: 370px;
+  border-radius: 18px;
+  margin: 88px 10px 10px 10px;
+  background-color: #eeeeee;
+  overflow: hidden;
+}
+@media (max-width: 1200px) {
+  .chatbot-drag-pratech-body {
+    height: 370px;
+  }
+}
+@media (max-width: 768px) {
+  .chatbot-drag-pratech-body {
+    height: 300px;
+  }
+}
+.chatbot-drag-pratech-body iframe {
+  width: 100%;
+  position: absolute;
+  height: 100%;
+  background-color: #eee;
+  border: none;
+}
+.chatbot-drag-pratech-footer {
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  background-color: #ee1c25;
+  height: 18px;
+  line-height: 13px;
+  color: #fff;
+  font-weight: 400;
+  font-size: 10px;
+  letter-spacing: 1px;
+  border-radius: 0 0 10px 10px;
+}
+.chatbot-drag-pratech-footer a {
+  color: #fff;
+  text-decoration: none;
+}
+.chatbot-drag-pratech-footer a:hover {
+  text-decoration: underline;
+}
+
+.parentchatpratech {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  z-index: 100;
+}
+
+.button-access-text {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  color: #838383;
+  line-height: 18px;
+  text-transform: uppercase;
+}
+
+.wc-console {
+  background-color: #eeeeee !important;
+  bottom: 8px;
+}
+.wc-console .wc-textbox {
+  bottom: !important;
+  left: 10px !important;
+  right: 10px !important;
+  top: 5px !important;
+}
+.wc-console .wc-textbox input {
+  border-radius: 20px !important;
+  height: 100% !important;
+  outline: none !important;
+  padding: 0 50px 0 15px !important;
+  box-sizing: border-box !important;
+  resize: none !important;
+  width: 100% !important;
+  background: #fff !important;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+}
+
+.wc-send svg {
+  fill: #ee1c25 !important;
+}
+
+.wc-message-groups {
+  top: 0 !important;
+}
+
+.back {
+  max-width: 100%;
+}
+
+/*# sourceMappingURL=styles.css.map */

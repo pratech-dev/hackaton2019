@@ -1,0 +1,8 @@
+applications:
+  - path: .
+    memory: 64M
+    instances: 1
+    domain: us-east.mybluemix.net
+    name: Pratech-Chatbot-Pruebas
+    host: pratech-chatbot-pruebas
+    disk_quota: 1024M

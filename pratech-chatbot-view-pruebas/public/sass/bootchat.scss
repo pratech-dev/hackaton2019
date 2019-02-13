@@ -1,0 +1,139 @@
+.wc-header {
+    display: none !important;
+}
+.wc-message-from-me {
+    .wc-message-content {
+        background: $c-gray2;
+        color: $c-black !important;
+        border-radius: 5px !important;
+        box-shadow: none;
+        font-family: 'Roboto', sans-serif;
+
+    }
+    svg {
+        &.wc-message-callout {
+            path {
+                fill: $c-gray2 !important;
+            }
+        }
+    }
+    &.wc-message-from {
+        span {
+            display: none !important;
+        }
+    }
+}
+.wc-message-from-bot {
+    .wc-message-content {
+        background-color: $c-white !important;
+        border-radius: 5px !important;
+        min-width: 325px;
+        box-shadow: none;
+        color: $c-black;
+        font-family:  'Roboto', sans-serif;
+        strong {
+            font-weight: 700;
+            color:$c-1;
+        }
+        &:after {
+            content: "" !important;
+            clear: both !important;
+            display: table !important;
+        }
+        > div {
+            > .wc-list {
+                > .wc-card {
+                    &.video {
+                        iframe {
+                            position: relative !important;
+                        }
+                    }
+                    width: auto !important;
+                    background-color: transparent !important;
+                    border: 0 !important;
+                    padding: 8px 8px 0 !important;
+                    > .ac-container {
+                        padding: 0 !important;
+                    }
+                    h1 {
+                        font-family: 'Roboto', sans-serif;
+                        font-size: 15px;
+                        font-weight: 700;
+                        color: $c-black;
+                    }
+                    h1,
+                    p {
+                        font-family: 'Roboto', sans-serif;
+                        margin-bottom: 8px !important;
+                        color: $c-black;
+                    }
+                    ul {
+                        &.wc-card-buttons {
+                            li {
+                                list-style-type: none;
+                                width: 49% !important;
+                                float: left !important;
+                                height: 35px !important;
+                                position: relative !important;
+                                margin-bottom: 8px !important;
+                                &:nth-child(2n+0) {
+                                    float: right !important;
+                                }
+                                > button {
+                                    position: absolute !important;
+                                    width: 100% !important;
+                                    height: 100% !important;
+                                    padding: 0 5px !important;
+                                    top: 50% !important;
+                                    font-family: 'Roboto', sans-serif;
+                                    font-weight: 400;
+                                    font-size: 12px !important;
+                                    transform: translateY(-50%) !important;
+                                    border: 1px solid $c-1 !important;
+                                    color: $c-black !important;
+                                    border-radius: 20px;
+                                    &:hover {
+                                        border-color: $c-1 !important;
+                                        background-color: $c-1 !important;
+                                        color: $c-white !important;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    svg {
+        &.wc-message-callout {
+            path {
+                fill: $c-white !important;
+            }
+        }
+    }
+}
+.wc-console {
+    border: 0 !important;
+    height: 50px !important;
+    background-color: $c-gray !important;
+    .wc-textbox {
+        bottom: 5px;
+        left: 10px !important;
+        right: 10px;
+        top: 5px;
+    }
+    input[type=file] {
+        &#wc-upload-input {
+            display: none !important;
+        }
+    }
+    label {
+        &.wc-upload {
+            display: none !important;
+        }
+    }
+    svg {
+        margin: 16px !important;
+    }
+}
