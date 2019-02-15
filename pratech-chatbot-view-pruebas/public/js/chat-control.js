@@ -80,17 +80,17 @@ function openchatbox() {
         document.getElementById('bot')
       );
 
-      botConnection.activity$
-        .filter(activity => {
-          // console.log('activity filter');
-        }).subscribe(activity => {
-          // console.log('activity subs');
-        }, err => {
-          console.log(err);
-          this.error = err;
-          mensajeerror = this.error;
-          splunk();
-        })
+      // botConnection.activity$
+      //   .filter(activity => {
+      //     // console.log('activity filter');
+      //   }).subscribe(activity => {
+      //     // console.log('activity subs');
+      //   }, err => {
+      //     console.log(err);
+      //     this.error = err;
+      //     mensajeerror = this.error;
+      //     splunk();
+      //   })
 
       $('.chatbot-drag-pratech').addClass('show');
       $('.hide-chat').click(function () {
@@ -99,60 +99,60 @@ function openchatbox() {
       $('#draggable').draggable({
         containment: 'parent'
       });
-      //saludar()
+      saludar()
     }
   }
 }
 
-// function saludar() {
-//   this.botConnection
-//     .postActivity({
-//       type: 'message',
-//       from: {
-//         id: this.userBot.id,
-//         name: this.userBot.name
-//       },
-//       text: 'hola'
-//     })
-//     .subscribe(
-//       id => console.log('success', id),
-//       err => {
-//         console.log(err);
-//         this.error = err;
-//         mensajeerror = this.error;
-//         splunk();
-//       }
-//     );
-// }
-
-function splunk() {
-  let origin = window.location.origin;
-  // console.log('Consulta => ', origin);
-  let aplication = 'http://pratech-integrador-qa.us-east.mybluemix.net';
-  // console.log('aplication => ', aplication);
-  let urlsplunk = 'https://pratech-logger-qa.us-east.mybluemix.net/api/logger';
-  // console.log('urlsplunk => ', urlsplunk);
-  let date = moment().format();
-  // console.log('moment => ', date);
-
-  let datos = {
-    date: date,
-    aplication: origin,
-    level: 'DEBUG',
-    typeEntrance: 'REQUEST',
-    customer: 'Pratech-Pruebas',
-    id_session: this.id,
-    // guid: '',
-    origin: origin,
-    data: {
-      mensaje: this.error
-    }
-  };
-  console.log('Datos => ', datos);
-  $.post(urlsplunk, datos, function (data, status) {
-    console.log('Data: ' + data + '\nStatus: ' + status);
-  });
+function saludar() {
+  this.botConnection
+    .postActivity({
+      type: 'message',
+      from: {
+        id: this.userBot.id,
+        name: this.userBot.name
+      },
+      text: 'hola'
+    })
+    .subscribe(
+      id => console.log('success', id),
+      err => {
+        console.log(err);
+        this.error = err;
+        mensajeerror = this.error;
+        // splunk();
+      }
+    );
 }
+
+// function splunk() {
+//   let origin = window.location.origin;
+//   // console.log('Consulta => ', origin);
+//   let aplication = 'http://pratech-integrador-qa.us-east.mybluemix.net';
+//   // console.log('aplication => ', aplication);
+//   let urlsplunk = 'https://pratech-logger-qa.us-east.mybluemix.net/api/logger';
+//   // console.log('urlsplunk => ', urlsplunk);
+//   let date = moment().format();
+//   // console.log('moment => ', date);
+
+//   let datos = {
+//     date: date,
+//     aplication: origin,
+//     level: 'DEBUG',
+//     typeEntrance: 'REQUEST',
+//     customer: 'Pratech-Pruebas',
+//     id_session: this.id,
+//     // guid: '',
+//     origin: origin,
+//     data: {
+//       mensaje: this.error
+//     }
+//   };
+//   console.log('Datos => ', datos);
+//   $.post(urlsplunk, datos, function (data, status) {
+//     console.log('Data: ' + data + '\nStatus: ' + status);
+//   });
+// }
 
 function getFecha() {
   moment.tz.add("America/Bogota|LMT BMT -05 -04|4U.g 4U.g 50 40|01232|-3sTv3.I 1eIo0 38yo3.I 2en0|90e5");
