@@ -60,7 +60,7 @@ function openchatbox() {
         name: ''
       };
       this.directLineSecret =
-        'YkhVw8Yipp8.cwA.9Kk.cWxKQe97pAYCDlLAMtVEjK7XiYvucpYZ817z0TlirRk5';
+        'YkhVw8Yipp8.cwA.9Kk.cWxKQe97pAYCDlLAMtVEjK7XiYvucpYZ817z0TlirRk';
       this.botConnection = new BotChat.DirectLine({
         secret: this.directLineSecret
       });
