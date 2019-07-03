@@ -1,0 +1,64 @@
+.container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  padding: 30px 100px;
+  box-sizing: border-box;
+  background: linear-gradient(270deg, #1173aa, #66b9e8);
+  background-size: 400% 400%;
+  -webkit-animation: gradient-animator 30s ease infinite;
+  -moz-animation: gradient-animator 30s ease infinite;
+  animation: gradient-animator 30s ease infinite;
+}
+.container > .preview-bot {
+  width: 50%;
+  flex: 1 0 auto;
+  height: 100%;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 0 40px 0 rgba(0, 0, 0, 0.1);
+}
+.container > .side-bot {
+  width: 50%;
+  height: 100%;
+  flex: 1 0 auto;
+}
+
+@-webkit-keyframes gradient-animator {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+@-moz-keyframes gradient-animator {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+@keyframes gradient-animator {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/*# sourceMappingURL=hackaton.css.map */
