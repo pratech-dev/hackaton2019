@@ -1,7 +1,7 @@
 {
-  "name": "konecta-bancolombia-ventas",
+  "name": "pratech-chatbot-view-pruebas",
   "version": "1.0.0",
-  "description": "template inicial node",
+  "description": "Canal WEB asistente virtual Pratech",
   "main": "server.ts",
   "scripts": {
     "dev": "npm run grunt && SET NODE_ENV=development && nodemon ./bin/www",

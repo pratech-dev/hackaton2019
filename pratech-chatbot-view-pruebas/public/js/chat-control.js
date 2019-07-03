@@ -19,9 +19,6 @@ function hidechatbox() {
   });
 }
 
-// let url = 'http://localhost:8081/pruebas';
-let url = 'https://pratech-chatbot-pruebas.us-east.mybluemix.net/pruebas'
-
 function openchatbox() {
   if ($('.parentchatpratech').length) {
     $('.chatbot-drag-pratech').addClass('show');
@@ -40,9 +37,7 @@ function openchatbox() {
         '</ul>' +
         '</div>' +
         '<div class="avatar-img">' +
-        '<img src="' +
-        url +
-        '/images/avatar.png" alt="" class="img-responsive">' +
+        '<img src="images/avatar.png" alt="" class="img-responsive">' +
         '</div>' +
         '</div>' +
         '</div>' +
@@ -173,16 +168,13 @@ function injectReferences() {
     )
   );
   $('head').append(
-    $('<link rel="stylesheet" type="text/css" />').attr(
-      'href',
-      url + '/css/styles.css'
-    )
+    $('<link rel="stylesheet" type="text/css" />').attr('href', 'css/styles.css')
   );
 
 
   //Js bot framework
   $.ajax({
-    url: url + '/js/botchat.js',
+    url: 'js/botchat.js',
     dataType: 'script',
     cache: true
   }).done(function (script, textStatus) {
