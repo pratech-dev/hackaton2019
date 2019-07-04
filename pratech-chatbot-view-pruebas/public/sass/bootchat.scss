@@ -1,101 +1,93 @@
-.wc-header {
-    display: none !important;
+.wc-header{
+    display: none;
 }
-.wc-message-from-me {
-    .wc-message-content {
-        background: $c-gray2;
-        color: $c-black !important;
-        border-radius: 5px !important;
-        box-shadow: none;
-        font-family: 'Roboto', sans-serif;
+.wc-app{
+    height: 100%;
+    background-color: $c-gray;
+    > .wc-chatview-panel{
+        > .wc-header{
+            display: none;
+        }
 
-    }
-    svg {
-        &.wc-message-callout {
-            path {
-                fill: $c-gray2 !important;
-            }
-        }
-    }
-    &.wc-message-from {
-        span {
-            display: none !important;
-        }
-    }
-}
-.wc-message-from-bot {
-    .wc-message-content {
-        background-color: $c-white !important;
-        border-radius: 5px !important;
-        min-width: 325px;
-        box-shadow: none;
-        color: $c-black;
-        font-family:  'Roboto', sans-serif;
-        strong {
-            font-weight: 700;
-            color:$c-1;
-        }
-        &:after {
-            content: "" !important;
-            clear: both !important;
-            display: table !important;
-        }
-        > div {
-            > .wc-list {
-                > .wc-card {
-                    &.video {
-                        iframe {
-                            position: relative !important;
-                        }
-                    }
-                    width: auto !important;
-                    background-color: transparent !important;
-                    border: 0 !important;
-                    padding: 8px 8px 0 !important;
-                    > .ac-container {
-                        padding: 0 !important;
-                    }
-                    h1 {
-                        font-family: 'Roboto', sans-serif;
-                        font-size: 15px;
-                        font-weight: 700;
-                        color: $c-black;
-                    }
-                    h1,
-                    p {
-                        font-family: 'Roboto', sans-serif;
-                        margin-bottom: 8px !important;
-                        color: $c-black;
-                    }
-                    ul {
-                        &.wc-card-buttons {
-                            li {
-                                list-style-type: none;
-                                width: 49% !important;
-                                float: left !important;
-                                height: 35px !important;
-                                position: relative !important;
-                                margin-bottom: 8px !important;
-                                &:nth-child(2n+0) {
-                                    float: right !important;
+        > .wc-message-pane{
+            height: 100%;
+            > .wc-message-groups{
+                top: 0;
+                bottom: 60px;
+                > .wc-message-group-content{
+                    > .wc-message-wrapper{
+                        > .wc-message{
+                            &.wc-message-from{
+                                &-bot{
+                                    > .wc-message-content{
+                                        border-radius: 0 30px 30px 30px;
+                                        background-color: $c-white;
+                                        font-size: 17.5px;
+                                        padding: 12px 17px;
+                                        box-shadow: 0px 5px 13px 0px rgba(0, 0, 0, 0.1);
+                                        > .wc-message-callout{
+                                            display: none;
+                                            > path{
+                                                fill: $c-white;
+                                            }
+                                        }
+                                        > div{
+                                            > .wc-list{
+                                                > .wc-card{
+                                                    border: 0;
+                                                    width: 100%;
+                                                    > img{
+                                                        width: 100%;
+                                                        height: auto;
+                                                        max-height: none;
+                                                    }
+                                                    > h1, > h2{
+                                                        font-size: 15px;
+                                                    }
+                                                    > .wc-card-buttons{
+                                                        margin-top: 5px;
+                                                        list-style-type: none;
+
+                                                        > li{
+                                                            > button{
+                                                                border-radius: 3px;
+                                                                color: rgba(0, 0, 0, 0.6);
+                                                                border-color: $c-1;
+                                                                transition: all .2s;
+                                                                font-size: 14px;
+                                                                width: 100%;
+                                                                box-sizing: border-box;
+
+                                                                &:hover{
+                                                                    background-color: $c-1;
+                                                                    color: $c-white;
+                                                                }
+                                                            }
+                                                            margin-bottom: 5px;
+                                                            &:last-child{
+                                                                margin-bottom: 0px;
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
                                 }
-                                > button {
-                                    position: absolute !important;
-                                    width: 100% !important;
-                                    height: 100% !important;
-                                    padding: 0 5px !important;
-                                    top: 50% !important;
-                                    font-family: 'Roboto', sans-serif;
-                                    font-weight: 400;
-                                    font-size: 12px !important;
-                                    transform: translateY(-50%) !important;
-                                    border: 1px solid $c-1 !important;
-                                    color: $c-black !important;
-                                    border-radius: 20px;
-                                    &:hover {
-                                        border-color: $c-1 !important;
-                                        background-color: $c-1 !important;
-                                        color: $c-white !important;
+                                &-me{
+                                    > .wc-message-content{
+                                        border-radius: 30px 0 30px 30px;
+                                        font-size: 17.5px;
+                                        padding: 12px 17px;
+                                        background-color: $c-1;
+                                        color: $c-white;
+                                        box-shadow: 0px 5px 13px 0px rgba(0, 0, 0, 0.1);
+                                        > .wc-message-callout{
+                                            display: none;
+                                            > path{
+                                                fill: $c-1;
+                                            }
+                                        }
                                     }
                                 }
                             }
@@ -104,36 +96,48 @@
                 }
             }
         }
-    }
-    svg {
-        &.wc-message-callout {
-            path {
-                fill: $c-white !important;
+
+        > .wc-console{
+            border: 0px solid $c-gray;
+            border-radius: 50px;
+            bottom: 10px;
+            margin: 0 10px;
+            
+            > input{
+                &#wc-upload-input{
+                    display: none;
+                }
+            }
+            > .wc-upload{
+                display: none;
+            }
+
+            > .wc-textbox{
+                left: 0;
+                margin-right: 10px;
+                > input{
+                    &[type=text]{
+                        background-color: $c-white;
+                        border-radius: 50px !important;
+                        font-size: 17px;
+                        padding: 0 20px;
+                        box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.1);
+                    }
+                }
+            }
+            > .wc-send{
+                width: 50px;
+                height: 50px;
+                background-color: $c-1;
+                border-radius: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                > svg{
+                    fill: $c-white;
+                    margin: 0px !important;
+                }
             }
         }
-    }
-}
-.wc-console {
-    border: 0 !important;
-    height: 50px !important;
-    background-color: $c-gray !important;
-    .wc-textbox {
-        bottom: 5px;
-        left: 10px !important;
-        right: 10px;
-        top: 5px;
-    }
-    input[type=file] {
-        &#wc-upload-input {
-            display: none !important;
-        }
-    }
-    label {
-        &.wc-upload {
-            display: none !important;
-        }
-    }
-    svg {
-        margin: 16px !important;
     }
 }
