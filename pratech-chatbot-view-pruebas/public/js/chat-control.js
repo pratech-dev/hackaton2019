@@ -1,10 +1,6 @@
 $(document).ready(function () {
   injectReferences();
   openchatbox();
-  getLocation($("#location").get())
-  $("#sharelocation").on("click", function(e){
-    getLocation($("#location").get())    
-  });
 });
 
 function openchatbox() {
@@ -31,11 +27,36 @@ function openchatbox() {
       },
       document.getElementById('bot')
     );
-    saludar()
+    navigator.geolocation.getCurrentPosition(saludarPosition, saludarSinPosicion);
   }
 }
 
-function saludar() {
+function saludarPosition(position) {
+  console.debug('position', position);
+  botInit("hola::"+position.coords.latitude+"::"+position.coords.longitude)
+}
+
+function saludarSinPosicion(error) {
+  console.debug('ERROR', error);
+  var mensaje = "";
+  switch(error.code) {
+    case error.PERMISSION_DENIED:
+      mensaje = "User denied the request for Geolocation."
+      break;
+    case error.POSITION_UNAVAILABLE:
+      mensaje = "Location information is unavailable."
+      break;
+    case error.TIMEOUT:
+      mensaje = "The request to get user location timed out."
+      break;
+    case error.UNKNOWN_ERROR:
+      mensaje = "An unknown error occurred."
+      break;
+  }
+  botInit("hola::0::0::"+mensaje);
+}
+
+function botInit(saludo){
   this.botConnection
     .postActivity({
       type: 'message',
@@ -43,7 +64,7 @@ function saludar() {
         id: this.userBot.id,
         name: this.userBot.name
       },
-      text: 'hola'
+      text: saludo
     })
     .subscribe(
       id => console.log('success', id),
@@ -55,7 +76,6 @@ function saludar() {
       }
     );
 }
-
 // function splunk() {
 //   let origin = window.location.origin;
 //   // console.log('Consulta => ', origin);
@@ -96,25 +116,6 @@ function getFecha() {
 
 
 function injectReferences() {
-  //Css bot framework
-  $('head').append(
-    $('<link rel="stylesheet" type="text/css" />').attr(
-      'href',
-      'https://cdn.botframework.com/botframework-webchat/master/botchat.css'
-    )
-  );
-  $('head').append(
-    $('<link rel="stylesheet" type="text/css" />').attr('href', 'css/styles.css')
-  );
-
-  //js font awesome
-  $.ajax({
-    url: 'https://use.fontawesome.com/e95ecc4c16.js',
-    dataType: 'script',
-    cache: true
-  }).done(function (script, textStatus) {
-    console.log('load  https://use.fontawesome.com/e95ecc4c16.js');
-  });
   //js moment.js
   $.ajax({
     url: 'https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js',
@@ -131,7 +132,6 @@ function injectReferences() {
   }).done(function (script, textStatus) {
     console.log('load  https://momentjs.com/downloads/moment-timezone-with-data.min.js');
   });
-
 }
 
 function guid() {
@@ -154,16 +154,4 @@ function guid() {
     s4() +
     s4()
   );
-}
-
-function getLocation(element) {
-  if (navigator.geolocation) {
-    navigator.geolocation.getCurrentPosition(showPosition);
-  } else {
-    element.innerHTML = "Geolocation is not supported by this browser.";
-  }
-}
-
-function showPosition(position) {
-  return position;
 }
