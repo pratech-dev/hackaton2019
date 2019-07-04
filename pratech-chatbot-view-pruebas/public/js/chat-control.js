@@ -1,101 +1,37 @@
 $(document).ready(function () {
   injectReferences();
-  eventosChat();
+  openchatbox();
+  getLocation($("#location").get())
+  $("#sharelocation").on("click", function(e){
+    getLocation($("#location").get())    
+  });
 });
 
-function eventosChat() {
-  $('a.chat').click(function () {
-    openchatbox();
-  });
-  $('.hide-chat').click(function () {
-    hidechatbox();
-  });
-}
-
-function hidechatbox() {
-  $('.chatbot-drag-pratech').removeClass('show');
-  $('.chat').click(function () {
-    openchatbox();
-  });
-}
-
 function openchatbox() {
-  if ($('.parentchatpratech').length) {
-    $('.chatbot-drag-pratech').addClass('show');
-  } else {
-    $('body').append(
-      $(
-        '<div class="parentchatpratech parent">' +
-        '<div class="chatbot-drag-pratech show" id="draggable">' +
-        '<div class="chatbot-drag-pratech-header">' +
-        '<div class="-info-title">' +
-        '<div class="title-chat">¡Hola, soy Pratech-Pruebas!</div>' +
-        '<div class="title-chat"><span class="lighter">¿En qué puedo ayudarte?</span></div>' +
-        '<div class="icon">' +
-        '<ul class="list-actions hide-chat">' +
-        '<li><a href="#"><i class="fa fa-times"></i></a></li>' +
-        '</ul>' +
-        '</div>' +
-        '<div class="avatar-img">' +
-        '<img src="images/avatar.png" alt="" class="img-responsive">' +
-        '</div>' +
-        '</div>' +
-        '</div>' +
-        '<div class="chatbot-drag-pratech-body" id="bot">' +
-        '</div>' +
-        '</div>' +
-        '</div>'
-      )
-    );
 
-    $('#draggable').show();
-    if (!this.userBot) {
-      this.userBot = {
-        id: 'Pratech-Pruebas ' + guid(),
-        name: ''
-      };
-      this.directLineSecret =
-        'YkhVw8Yipp8.cwA.9Kk.cWxKQe97pAYCDlLAMtVEjK7XiYvucpYZ817z0TlirRk';
-      this.botConnection = new BotChat.DirectLine({
-        secret: this.directLineSecret
-      });
+  if (!this.userBot) {
+    this.userBot = {
+      id: 'Pratech-Pruebas ' + guid(),
+      name: ''
+    };
+    this.directLineSecret =
+      'YkhVw8Yipp8.cwA.9Kk.cWxKQe97pAYCDlLAMtVEjK7XiYvucpYZ817z0TlirRk';
+    this.botConnection = new BotChat.DirectLine({
+      secret: this.directLineSecret
+    });
+    this.id = 'invitado ' + new Date().getTime();
 
-
-      this.id = 'invitado ' + new Date().getTime();
-      // console.log(this.id);
-
-      BotChat.App({
-          botConnection: botConnection,
-          user: this.userBot,
-          bot: {
-            id: 'botid'
-          },
-          resize: 'detect'
+    BotChat.App({
+        botConnection: botConnection,
+        user: this.userBot,
+        bot: {
+          id: 'botid'
         },
-        document.getElementById('bot')
-      );
-
-      // botConnection.activity$
-      //   .filter(activity => {
-      //     // console.log('activity filter');
-      //   }).subscribe(activity => {
-      //     // console.log('activity subs');
-      //   }, err => {
-      //     console.log(err);
-      //     this.error = err;
-      //     mensajeerror = this.error;
-      //     splunk();
-      //   })
-
-      $('.chatbot-drag-pratech').addClass('show');
-      $('.hide-chat').click(function () {
-        hidechatbox();
-      });
-      $('#draggable').draggable({
-        containment: 'parent'
-      });
-      saludar()
-    }
+        resize: 'detect'
+      },
+      document.getElementById('bot')
+    );
+    saludar()
   }
 }
 
@@ -171,16 +107,6 @@ function injectReferences() {
     $('<link rel="stylesheet" type="text/css" />').attr('href', 'css/styles.css')
   );
 
-
-  //Js bot framework
-  $.ajax({
-    url: 'js/botchat.js',
-    dataType: 'script',
-    cache: true
-  }).done(function (script, textStatus) {
-    eventosChat();
-  });
-
   //js font awesome
   $.ajax({
     url: 'https://use.fontawesome.com/e95ecc4c16.js',
@@ -228,4 +154,16 @@ function guid() {
     s4() +
     s4()
   );
+}
+
+function getLocation(element) {
+  if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(showPosition);
+  } else {
+    element.innerHTML = "Geolocation is not supported by this browser.";
+  }
+}
+
+function showPosition(position) {
+  return position;
 }
