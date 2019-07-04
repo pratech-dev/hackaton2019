@@ -60,41 +60,40 @@ body {
   font-family: "Roboto", sans-serif;
 }
 
-.container {
+.container-pratech {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
   display: flex;
-  padding: 30px 100px;
+  padding: 0;
   box-sizing: border-box;
   background: linear-gradient(270deg, #1173aa, #66b9e8);
   background-size: 400% 400%;
 }
-.container > .logo-ulxc {
-  width: 120px;
+.container-pratech > .logo-ulxc {
+  width: 200px;
   opacity: 0.5;
   position: absolute;
   top: 10px;
   right: 10px;
   transition: all 0.2s;
 }
-.container > .preview-bot {
+.container-pratech > .preview-bot {
   width: 50%;
   flex: 1 0 auto;
   height: 100%;
   background-color: #fff;
-  border-radius: 5px;
   box-shadow: 0 0 40px 0 rgba(0, 0, 0, 0.1);
 }
-.container > .side-bot {
+.container-pratech > .side-bot {
   width: 50%;
   height: 100%;
   flex: 1 0 auto;
   position: relative;
 }
-.container > .side-bot > .share-location {
+.container-pratech > .side-bot > .share-location {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -103,49 +102,118 @@ body {
   text-align: left;
   padding: 0 80px;
 }
-.container > .side-bot > .share-location > h1, .container > .side-bot > .share-location > p, .container > .side-bot > .share-location > h2 {
+.container-pratech > .side-bot > .share-location > h1, .container-pratech > .side-bot > .share-location > p, .container-pratech > .side-bot > .share-location > h2 {
   font-family: "Roboto", sans-serif;
   line-height: 1;
   text-shadow: 3px 2px 0 rgba(0, 0, 0, 0.1);
 }
-.container > .side-bot > .share-location > h1 {
+.container-pratech > .side-bot > .share-location > h1 {
   color: #145a82;
   font-size: 70px;
   font-weight: 600;
   margin-bottom: 20px;
 }
-.container > .side-bot > .share-location > h2 {
+.container-pratech > .side-bot > .share-location > h2 {
   color: #fff;
   font-size: 25px;
   line-height: 1.2;
 }
-.container > .side-bot > .share-location > button {
+.container-pratech > .side-bot > .share-location > button {
   font-size: 20px;
   font-weight: 400;
-  background: linear-gradient(270deg, #fbf60c, #90dd11);
+  background: linear-gradient(46deg, #fbf60c, #90dd11);
   background-size: 400% 400%;
-  -webkit-animation: animationButton 56s ease infinite;
-  -moz-animation: animationButton 56s ease infinite;
-  animation: animationButton 56s ease infinite;
+  -webkit-animation: animationButton 27s ease infinite;
+  -moz-animation: animationButton 27s ease infinite;
+  animation: animationButton 27s ease infinite;
   width: auto;
-  padding: 20px 40px;
+  padding: 20px 40px 20px 60px;
   border-radius: 60px;
   color: #0f542e;
   font-weight: bold;
   text-transform: uppercase;
   border: none;
   margin-top: 40px;
+  position: relative;
   box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2);
   cursor: pointer;
   transition: all 0.2s;
 }
-.container > .side-bot > .share-location > button:hover {
+.container-pratech > .side-bot > .share-location > button > .fa {
+  font-size: 30px;
+  position: absolute;
+  left: 25px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.container-pratech > .side-bot > .share-location > button:hover {
   box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.3);
 }
-.container > .form-bot {
+.container-pratech > .side-bot > .consejos {
+  width: 100%;
+  position: absolute;
+  height: 100%;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.container-pratech > .side-bot > .consejos > .carousel {
+  height: 100%;
+}
+.container-pratech > .side-bot > .consejos > .carousel > .carousel-inner {
+  height: 100%;
+}
+.container-pratech > .side-bot > .consejos > .carousel > .carousel-inner > .item {
+  height: 100%;
+}
+.container-pratech > .side-bot > .consejos > .carousel > .carousel-inner > .item > .carousel-caption {
+  left: auto;
+  right: auto;
+  padding: 0 40px;
+  width: 100%;
+  bottom: auto;
+  top: 50%;
+  transform: translateY(-50%);
+  text-align: left;
+}
+.container-pratech > .side-bot > .consejos > .carousel > .carousel-inner > .item > .carousel-caption > .badge {
+  background-color: #fbf60c;
+  color: #145a82;
+  border-radius: 20px;
+  margin-bottom: 15px;
+  font-size: 12px;
+  text-transform: uppercase;
+  text-shadow: none;
+  padding: 5px 10px;
+}
+.container-pratech > .side-bot > .consejos > .carousel > .carousel-inner > .item > .carousel-caption > .fa {
+  font-size: 50px;
+  color: #fff;
+  display: block;
+  margin-bottom: 20px;
+}
+.container-pratech > .side-bot > .consejos > .carousel > .carousel-inner > .item > .carousel-caption > h4 {
+  font-size: 24px;
+  color: #fff;
+  text-shadow: none;
+  font-weight: 300;
+  padding: 15px;
+  line-height: 1.2;
+  border-radius: 5px;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+.container-pratech > .side-bot > .consejos > .carousel > .carousel-inner > .item > .carousel-caption > h4 > div {
+  font-weight: 200;
+  font-size: 16px;
+  margin-top: 10px;
+  line-height: normal;
+}
+.container-pratech > .side-bot > .consejos > .carousel > .carousel-inner > .item > .carousel-caption > h4 > div > strong {
+  font-weight: bold;
+}
+.container-pratech > .form-bot {
   display: none;
 }
-.container.form > .logo-ulxc {
+.container-pratech.form > .logo-ulxc {
   width: 220px;
   top: 40px;
   right: auto;
@@ -153,10 +221,10 @@ body {
   opacity: 1;
   transform: translateX(-50%);
 }
-.container.form > .preview-bot, .container.form > .side-bot {
+.container-pratech.form > .preview-bot, .container-pratech.form > .side-bot {
   display: none;
 }
-.container.form > .form-bot {
+.container-pratech.form > .form-bot {
   display: block;
   width: 400px;
   position: absolute;
@@ -165,25 +233,25 @@ body {
   left: 50%;
   transform: translate(-50%, -50%);
 }
-.container.form > .form-bot > h1 {
+.container-pratech.form > .form-bot > h1 {
   font-size: 30px;
   color: #0a4f75;
   font-weight: 600;
   margin-bottom: 25px;
   text-align: center;
 }
-.container.form > .form-bot > form {
+.container-pratech.form > .form-bot > form {
   width: 100%;
   height: auto;
   display: flex;
   flex-wrap: wrap;
 }
-.container.form > .form-bot > form > .form-group {
+.container-pratech.form > .form-bot > form > .form-group {
   width: 100%;
   height: auto;
   margin-top: 15px;
 }
-.container.form > .form-bot > form > .form-group > label {
+.container-pratech.form > .form-bot > form > .form-group > label {
   width: 100%;
   color: #fff;
   font-size: 20px;
@@ -191,7 +259,7 @@ body {
   margin-bottom: 5px;
   display: block;
 }
-.container.form > .form-bot > form > .form-group > input[type=text] {
+.container-pratech.form > .form-bot > form > .form-group > input[type=text] {
   width: 100%;
   background-color: rgba(255, 255, 255, 0.15);
   padding: 0 15px;
@@ -202,17 +270,17 @@ body {
   border-radius: 5px;
   transition: all 0.2s;
 }
-.container.form > .form-bot > form > .form-group > input[type=text]:hover, .container.form > .form-bot > form > .form-group > input[type=text]:focus {
+.container-pratech.form > .form-bot > form > .form-group > input[type=text]:hover, .container-pratech.form > .form-bot > form > .form-group > input[type=text]:focus {
   background-color: #fff;
   color: #838383;
 }
-.container.form > .form-bot > form > .form-group.xs6 {
+.container-pratech.form > .form-bot > form > .form-group.xs6 {
   width: 50%;
 }
-.container.form > .form-bot > form > .form-group:first-child {
+.container-pratech.form > .form-bot > form > .form-group:first-child {
   margin-top: 0;
 }
-.container.form > .form-bot > form > .info-copy {
+.container-pratech.form > .form-bot > form > .info-copy {
   font-size: 15px;
   color: #fff;
   line-height: normal;
@@ -221,7 +289,7 @@ body {
   position: relative;
   padding-left: 40px;
 }
-.container.form > .form-bot > form > .info-copy > .fa {
+.container-pratech.form > .form-bot > form > .info-copy > .fa {
   width: 30px;
   height: 30px;
   line-height: 30px;
@@ -234,7 +302,7 @@ body {
   left: 0;
   transform: translateY(-50%);
 }
-.container.form > .form-bot > form > .btn-send {
+.container-pratech.form > .form-bot > form > .btn-send {
   width: 200px;
   height: 50px;
   line-height: 50px;
@@ -250,41 +318,41 @@ body {
   box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.1);
   transition: all 0.2s;
 }
-.container.form > .form-bot > form > .btn-send:hover {
+.container-pratech.form > .form-bot > form > .btn-send:hover {
   box-shadow: 0 0 40px 0 rgba(0, 0, 0, 0.3);
 }
 
 @-webkit-keyframes animationButton {
   0% {
-    background-position: 0% 50%;
+    background-position: 0% 84%;
   }
   50% {
-    background-position: 100% 50%;
+    background-position: 100% 17%;
   }
   100% {
-    background-position: 0% 50%;
+    background-position: 0% 84%;
   }
 }
 @-moz-keyframes animationButton {
   0% {
-    background-position: 0% 50%;
+    background-position: 0% 84%;
   }
   50% {
-    background-position: 100% 50%;
+    background-position: 100% 17%;
   }
   100% {
-    background-position: 0% 50%;
+    background-position: 0% 84%;
   }
 }
 @keyframes animationButton {
   0% {
-    background-position: 0% 50%;
+    background-position: 0% 84%;
   }
   50% {
-    background-position: 100% 50%;
+    background-position: 100% 17%;
   }
   100% {
-    background-position: 0% 50%;
+    background-position: 0% 84%;
   }
 }
 
