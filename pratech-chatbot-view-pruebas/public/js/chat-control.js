@@ -104,7 +104,7 @@ function injectReferences() {
     )
   );
   $('head').append(
-    $('<link rel="stylesheet" type="text/css" />').attr('href', 'css/styles.css')
+    $('<link rel="stylesheet" type="text/css" />').attr('href', 'css/hackaton.css')
   );
 
   //js font awesome

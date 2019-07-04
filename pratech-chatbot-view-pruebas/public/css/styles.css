@@ -1,123 +1,126 @@
 @import url("https://fonts.googleapis.com/css?family=Roboto:300,400,700");
 .wc-header {
-  display: none !important;
+  display: none;
 }
 
-.wc-message-from-me .wc-message-content {
-  background: #d9d9d9;
-  color: #000 !important;
-  border-radius: 5px !important;
-  box-shadow: none;
-  font-family: "Roboto", sans-serif;
+.wc-app {
+  height: 100%;
+  background-color: #dedede;
 }
-.wc-message-from-me svg.wc-message-callout path {
-  fill: #d9d9d9 !important;
+.wc-app > .wc-chatview-panel > .wc-header {
+  display: none;
 }
-.wc-message-from-me.wc-message-from span {
-  display: none !important;
+.wc-app > .wc-chatview-panel > .wc-message-pane {
+  height: 100%;
 }
-
-.wc-message-from-bot .wc-message-content {
-  background-color: #fff !important;
-  border-radius: 5px !important;
-  min-width: 325px;
-  box-shadow: none;
-  color: #000;
-  font-family: "Roboto", sans-serif;
+.wc-app > .wc-chatview-panel > .wc-message-pane > .wc-message-groups {
+  top: 0;
+  bottom: 60px;
 }
-.wc-message-from-bot .wc-message-content strong {
-  font-weight: 700;
-  color: #ee1c25;
+.wc-app > .wc-chatview-panel > .wc-message-pane > .wc-message-groups > .wc-message-group-content > .wc-message-wrapper > .wc-message.wc-message-from-bot > .wc-message-content {
+  border-radius: 0 30px 30px 30px;
+  background-color: #fff;
+  font-size: 17.5px;
+  padding: 12px 17px;
+  box-shadow: 0px 5px 13px 0px rgba(0, 0, 0, 0.1);
 }
-.wc-message-from-bot .wc-message-content:after {
-  content: "" !important;
-  clear: both !important;
-  display: table !important;
+.wc-app > .wc-chatview-panel > .wc-message-pane > .wc-message-groups > .wc-message-group-content > .wc-message-wrapper > .wc-message.wc-message-from-bot > .wc-message-content > .wc-message-callout {
+  display: none;
 }
-.wc-message-from-bot .wc-message-content > div > .wc-list > .wc-card {
-  width: auto !important;
-  background-color: transparent !important;
-  border: 0 !important;
-  padding: 8px 8px 0 !important;
+.wc-app > .wc-chatview-panel > .wc-message-pane > .wc-message-groups > .wc-message-group-content > .wc-message-wrapper > .wc-message.wc-message-from-bot > .wc-message-content > .wc-message-callout > path {
+  fill: #fff;
 }
-.wc-message-from-bot .wc-message-content > div > .wc-list > .wc-card.video iframe {
-  position: relative !important;
+.wc-app > .wc-chatview-panel > .wc-message-pane > .wc-message-groups > .wc-message-group-content > .wc-message-wrapper > .wc-message.wc-message-from-bot > .wc-message-content > div > .wc-list > .wc-card {
+  border: 0;
+  width: 100%;
 }
-.wc-message-from-bot .wc-message-content > div > .wc-list > .wc-card > .ac-container {
-  padding: 0 !important;
+.wc-app > .wc-chatview-panel > .wc-message-pane > .wc-message-groups > .wc-message-group-content > .wc-message-wrapper > .wc-message.wc-message-from-bot > .wc-message-content > div > .wc-list > .wc-card > img {
+  width: 100%;
+  height: auto;
+  max-height: none;
 }
-.wc-message-from-bot .wc-message-content > div > .wc-list > .wc-card h1 {
-  font-family: "Roboto", sans-serif;
+.wc-app > .wc-chatview-panel > .wc-message-pane > .wc-message-groups > .wc-message-group-content > .wc-message-wrapper > .wc-message.wc-message-from-bot > .wc-message-content > div > .wc-list > .wc-card > h1, .wc-app > .wc-chatview-panel > .wc-message-pane > .wc-message-groups > .wc-message-group-content > .wc-message-wrapper > .wc-message.wc-message-from-bot > .wc-message-content > div > .wc-list > .wc-card > h2 {
   font-size: 15px;
-  font-weight: 700;
-  color: #000;
 }
-.wc-message-from-bot .wc-message-content > div > .wc-list > .wc-card h1,
-.wc-message-from-bot .wc-message-content > div > .wc-list > .wc-card p {
-  font-family: "Roboto", sans-serif;
-  margin-bottom: 8px !important;
-  color: #000;
-}
-.wc-message-from-bot .wc-message-content > div > .wc-list > .wc-card ul.wc-card-buttons li {
+.wc-app > .wc-chatview-panel > .wc-message-pane > .wc-message-groups > .wc-message-group-content > .wc-message-wrapper > .wc-message.wc-message-from-bot > .wc-message-content > div > .wc-list > .wc-card > .wc-card-buttons {
+  margin-top: 5px;
   list-style-type: none;
-  width: 49% !important;
-  float: left !important;
-  height: 35px !important;
-  position: relative !important;
-  margin-bottom: 8px !important;
 }
-.wc-message-from-bot .wc-message-content > div > .wc-list > .wc-card ul.wc-card-buttons li:nth-child(2n+0) {
-  float: right !important;
+.wc-app > .wc-chatview-panel > .wc-message-pane > .wc-message-groups > .wc-message-group-content > .wc-message-wrapper > .wc-message.wc-message-from-bot > .wc-message-content > div > .wc-list > .wc-card > .wc-card-buttons > li {
+  margin-bottom: 5px;
 }
-.wc-message-from-bot .wc-message-content > div > .wc-list > .wc-card ul.wc-card-buttons li > button {
-  position: absolute !important;
-  width: 100% !important;
-  height: 100% !important;
-  padding: 0 5px !important;
-  top: 50% !important;
-  font-family: "Roboto", sans-serif;
-  font-weight: 400;
-  font-size: 12px !important;
-  transform: translateY(-50%) !important;
-  border: 1px solid #ee1c25 !important;
-  color: #000 !important;
-  border-radius: 20px;
+.wc-app > .wc-chatview-panel > .wc-message-pane > .wc-message-groups > .wc-message-group-content > .wc-message-wrapper > .wc-message.wc-message-from-bot > .wc-message-content > div > .wc-list > .wc-card > .wc-card-buttons > li > button {
+  border-radius: 3px;
+  color: rgba(0, 0, 0, 0.6);
+  border-color: #3e80a5;
+  transition: all 0.2s;
+  font-size: 14px;
+  width: 100%;
+  box-sizing: border-box;
 }
-.wc-message-from-bot .wc-message-content > div > .wc-list > .wc-card ul.wc-card-buttons li > button:hover {
-  border-color: #ee1c25 !important;
-  background-color: #ee1c25 !important;
-  color: #fff !important;
+.wc-app > .wc-chatview-panel > .wc-message-pane > .wc-message-groups > .wc-message-group-content > .wc-message-wrapper > .wc-message.wc-message-from-bot > .wc-message-content > div > .wc-list > .wc-card > .wc-card-buttons > li > button:hover {
+  background-color: #3e80a5;
+  color: #fff;
 }
-.wc-message-from-bot svg.wc-message-callout path {
-  fill: #fff !important;
+.wc-app > .wc-chatview-panel > .wc-message-pane > .wc-message-groups > .wc-message-group-content > .wc-message-wrapper > .wc-message.wc-message-from-bot > .wc-message-content > div > .wc-list > .wc-card > .wc-card-buttons > li:last-child {
+  margin-bottom: 0px;
 }
-
-.wc-console {
-  border: 0 !important;
-  height: 50px !important;
-  background-color: #eeeeee !important;
+.wc-app > .wc-chatview-panel > .wc-message-pane > .wc-message-groups > .wc-message-group-content > .wc-message-wrapper > .wc-message.wc-message-from-me > .wc-message-content {
+  border-radius: 30px 0 30px 30px;
+  font-size: 17.5px;
+  padding: 12px 17px;
+  background-color: #3e80a5;
+  color: #fff;
+  box-shadow: 0px 5px 13px 0px rgba(0, 0, 0, 0.1);
 }
-.wc-console .wc-textbox {
-  bottom: 5px;
-  left: 10px !important;
-  right: 10px;
-  top: 5px;
+.wc-app > .wc-chatview-panel > .wc-message-pane > .wc-message-groups > .wc-message-group-content > .wc-message-wrapper > .wc-message.wc-message-from-me > .wc-message-content > .wc-message-callout {
+  display: none;
 }
-.wc-console input[type=file]#wc-upload-input {
-  display: none !important;
+.wc-app > .wc-chatview-panel > .wc-message-pane > .wc-message-groups > .wc-message-group-content > .wc-message-wrapper > .wc-message.wc-message-from-me > .wc-message-content > .wc-message-callout > path {
+  fill: #3e80a5;
 }
-.wc-console label.wc-upload {
-  display: none !important;
+.wc-app > .wc-chatview-panel > .wc-console {
+  border: 0px solid #dedede;
+  border-radius: 50px;
+  bottom: 10px;
+  margin: 0 10px;
 }
-.wc-console svg {
-  margin: 16px !important;
+.wc-app > .wc-chatview-panel > .wc-console > input#wc-upload-input {
+  display: none;
+}
+.wc-app > .wc-chatview-panel > .wc-console > .wc-upload {
+  display: none;
+}
+.wc-app > .wc-chatview-panel > .wc-console > .wc-textbox {
+  left: 0;
+  margin-right: 10px;
+}
+.wc-app > .wc-chatview-panel > .wc-console > .wc-textbox > input[type=text] {
+  background-color: #fff;
+  border-radius: 50px !important;
+  font-size: 17px;
+  padding: 0 20px;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.1);
+}
+.wc-app > .wc-chatview-panel > .wc-console > .wc-send {
+  width: 50px;
+  height: 50px;
+  background-color: #3e80a5;
+  border-radius: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.wc-app > .wc-chatview-panel > .wc-console > .wc-send > svg {
+  fill: #fff;
+  margin: 0px !important;
 }
 
 .chatbot-float-pratech {
   border-radius: 30px 0 0 30px;
-  border-top: 2px solid #ee1c25;
-  border-bottom: 2px solid #ee1c25;
-  border-left: 2px solid #ee1c25;
+  border-top: 2px solid #3e80a5;
+  border-bottom: 2px solid #3e80a5;
+  border-left: 2px solid #3e80a5;
   position: fixed;
   width: 100px;
   height: 91px;
@@ -200,7 +203,7 @@
 }
 .chatbot-drag-pratech-header .-info-title .title-chat {
   font-size: 21px;
-  color: #ee1c25;
+  color: #3e80a5;
   font-weight: 700;
 }
 .chatbot-drag-pratech-header .-info-title .title-chat .lighter {
@@ -252,7 +255,7 @@
 .chatbot-drag-pratech-header .-info-title .icon ul.list-actions li {
   float: left;
   border-radius: 50%;
-  background-color: #eeeeee;
+  background-color: #dedede;
 }
 .chatbot-drag-pratech-header .-info-title .icon ul.list-actions li:hover {
   background-color: rgba(0, 0, 0, 0.1);
@@ -271,7 +274,7 @@
   height: 370px;
   border-radius: 18px;
   margin: 88px 10px 10px 10px;
-  background-color: #eeeeee;
+  background-color: #dedede;
   overflow: hidden;
 }
 @media (max-width: 1200px) {
@@ -295,7 +298,7 @@
   position: absolute;
   width: 100%;
   text-align: center;
-  background-color: #ee1c25;
+  background-color: #3e80a5;
   height: 18px;
   line-height: 13px;
   color: #fff;
@@ -331,7 +334,7 @@
 }
 
 .wc-console {
-  background-color: #eeeeee !important;
+  background-color: #dedede !important;
   bottom: 8px;
 }
 .wc-console .wc-textbox {
@@ -354,7 +357,7 @@
 }
 
 .wc-send svg {
-  fill: #ee1c25 !important;
+  fill: #3e80a5 !important;
 }
 
 .wc-message-groups {
