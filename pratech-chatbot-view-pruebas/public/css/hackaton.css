@@ -51,6 +51,14 @@ h1, h2, h3, h4, h5, h6, p {
 * {
   box-sizing: border-box;
 }
+*:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+}
 
 .container {
   position: absolute;
@@ -65,11 +73,12 @@ h1, h2, h3, h4, h5, h6, p {
   background-size: 400% 400%;
 }
 .container > .logo-ulxc {
-  width: 160px;
+  width: 120px;
   opacity: 0.5;
   position: absolute;
   top: 10px;
   right: 10px;
+  transition: all 0.2s;
 }
 .container > .preview-bot {
   width: 50%;
@@ -132,6 +141,95 @@ h1, h2, h3, h4, h5, h6, p {
 }
 .container > .side-bot > .share-location > button:hover {
   box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.3);
+}
+.container > .form-bot {
+  display: none;
+}
+.container.form > .logo-ulxc {
+  width: 220px;
+  top: 40px;
+  right: auto;
+  left: 50%;
+  opacity: 1;
+  transform: translateX(-50%);
+}
+.container.form > .preview-bot, .container.form > .side-bot {
+  display: none;
+}
+.container.form > .form-bot {
+  display: block;
+  width: 400px;
+  position: absolute;
+  margin-top: 30px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.container.form > .form-bot > h1 {
+  font-size: 30px;
+  color: #0a4f75;
+  font-weight: 600;
+  margin-bottom: 25px;
+  text-align: center;
+}
+.container.form > .form-bot > form {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-wrap: wrap;
+}
+.container.form > .form-bot > form > .form-group {
+  width: 100%;
+  height: auto;
+  margin-top: 15px;
+}
+.container.form > .form-bot > form > .form-group > label {
+  width: 100%;
+  color: #fff;
+  font-size: 20px;
+  font-weight: 300;
+  margin-bottom: 5px;
+  display: block;
+}
+.container.form > .form-bot > form > .form-group > input[type=text] {
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.15);
+  padding: 0 15px;
+  border: none;
+  height: 40px;
+  font-size: 17px;
+  color: #fff;
+  border-radius: 5px;
+  transition: all 0.2s;
+}
+.container.form > .form-bot > form > .form-group > input[type=text]:hover, .container.form > .form-bot > form > .form-group > input[type=text]:focus {
+  background-color: #fff;
+  color: #838383;
+}
+.container.form > .form-bot > form > .form-group.xs6 {
+  width: 50%;
+}
+.container.form > .form-bot > form > .form-group:first-child {
+  margin-top: 0;
+}
+.container.form > .form-bot > form > .btn-send {
+  width: 200px;
+  height: 50px;
+  line-height: 50px;
+  font-size: 20px;
+  background-color: #fbf60c;
+  color: #145a82;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: bold;
+  text-align: center;
+  border-radius: 50px;
+  margin: 30px auto 0;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.1);
+  transition: all 0.2s;
+}
+.container.form > .form-bot > form > .btn-send:hover {
+  box-shadow: 0 0 40px 0 rgba(0, 0, 0, 0.3);
 }
 
 @-webkit-keyframes animationButton {
