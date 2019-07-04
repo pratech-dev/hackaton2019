@@ -13,20 +13,20 @@ body{
     font-family: $f-ppal;
 }
 
-.container{
+.container-pratech{
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
     display: flex;
-    padding: 30px 100px;
+    padding: 30px 150px;
     box-sizing: border-box;
     background: linear-gradient(270deg, #1173aa, #66b9e8);
     background-size: 400% 400%;
 
     > .logo-ulxc{
-        width: 120px;
+        width: 200px;
         opacity: .5;
         position: absolute;
         top: 10px;
@@ -76,27 +76,99 @@ body{
             > button{
                 font-size: 20px;
                 font-weight: 400;
-                background: linear-gradient(270deg, #fbf60c, #90dd11);
+                background: linear-gradient(46deg, #fbf60c, #90dd11);
                 background-size: 400% 400%;
 
-                -webkit-animation: animationButton 56s ease infinite;
-                -moz-animation: animationButton 56s ease infinite;
-                animation: animationButton 56s ease infinite;
+                -webkit-animation: animationButton 27s ease infinite;
+                -moz-animation: animationButton 27s ease infinite;
+                animation: animationButton 27s ease infinite;
                 width: auto;
-                padding: 20px 40px;
+                padding: 20px 40px 20px 60px;
                 border-radius: 60px;
                 color: #0f542e;
                 font-weight: bold;
                 text-transform: uppercase;
                 border: none;
                 margin-top: 40px;
+                position: relative;
                 box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2);
                 cursor: pointer;
 
                 transition: all .2s;
 
+                > .fa{
+                    font-size: 30px;
+                    position: absolute;
+                    left: 25px;
+                    top: 50%;
+                    transform: translateY(-50%);
+                }
+
                 &:hover{
                     box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.3);
+                }
+            }
+        }
+
+        > .consejos{
+            width: 100%;
+            position: absolute;
+            height: 100%;
+            top: 50%;
+            transform: translateY(-50%);
+
+            > .carousel{
+                height: 100%;
+                > .carousel-inner{
+                    height: 100%;
+                    > .item{
+                        height: 100%;
+                        > .carousel-caption{
+                            left: auto;
+                            right: auto;
+                            padding: 0 40px;
+                            width: 100%;
+                            bottom: auto;
+                            top: 50%;
+                            transform: translateY(-50%);
+                            text-align: left;
+                            > .badge{
+                                background-color: #fbf60c;
+                                color: #145a82;
+                                border-radius: 20px;
+                                margin-bottom: 15px;
+                                font-size: 12px;
+                                text-transform: uppercase;
+                                text-shadow: none;
+                                padding: 5px 10px;
+                            }
+                            > .fa{
+                                font-size: 50px;
+                                color: $c-white;
+                                display: block;
+                                margin-bottom: 20px;
+                            }
+                            > h4{
+                                font-size: 24px;
+                                color: $c-white;
+                                text-shadow: none;
+                                font-weight: 300;
+                                padding: 15px;
+                                line-height: 1.2;
+                                border-radius: 5px;
+                                background-color: rgba(0, 0, 0, 0.1);
+                                > div{
+                                    font-weight: 200;
+                                    font-size: 16px;
+                                    margin-top: 10px;
+                                    line-height: normal;
+                                    > strong{
+                                        font-weight: bold;
+                                    }
+                                }
+                            }
+                        }
+                    }
                 }
             }
         }
@@ -232,17 +304,17 @@ body{
 }
 
 @-webkit-keyframes animationButton {
-    0%{background-position:0% 50%}
-    50%{background-position:100% 50%}
-    100%{background-position:0% 50%}
+    0%{background-position:0% 84%}
+    50%{background-position:100% 17%}
+    100%{background-position:0% 84%}
 }
 @-moz-keyframes animationButton {
-    0%{background-position:0% 50%}
-    50%{background-position:100% 50%}
-    100%{background-position:0% 50%}
+    0%{background-position:0% 84%}
+    50%{background-position:100% 17%}
+    100%{background-position:0% 84%}
 }
 @keyframes animationButton { 
-    0%{background-position:0% 50%}
-    50%{background-position:100% 50%}
-    100%{background-position:0% 50%}
+    0%{background-position:0% 84%}
+    50%{background-position:100% 17%}
+    100%{background-position:0% 84%}
 }
