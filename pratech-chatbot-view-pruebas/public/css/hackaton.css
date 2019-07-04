@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css?family=Roboto:300,400,700");
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
@@ -192,6 +193,7 @@ body {
 .container-pratech > .logo-ulxc {
   width: 200px;
   opacity: 0.5;
+  z-index: 3;
   position: absolute;
   top: 10px;
   right: 10px;
@@ -327,6 +329,136 @@ body {
 }
 .container-pratech > .side-bot > .consejos > .carousel > .carousel-inner > .item > .carousel-caption > h4 > div > strong {
   font-weight: bold;
+}
+.container-pratech > .side-bot > .news {
+  height: 100%;
+  width: 100%;
+  position: relative;
+}
+.container-pratech > .side-bot > .news::after, .container-pratech > .side-bot > .news::before {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0;
+  width: 100%;
+  pointer-events: none;
+  height: 100px;
+  z-index: 1;
+}
+.container-pratech > .side-bot > .news::before {
+  bottom: 0;
+  background: -moz-linear-gradient(top, transparent 0%, #56acdc 100%);
+  /* FF3.6-15 */
+  background: -webkit-linear-gradient(top, transparent 0%, #56acdc 100%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom, transparent 0%, #56acdc 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+}
+.container-pratech > .side-bot > .news::after {
+  top: 0;
+  background: -moz-linear-gradient(top, #56acdc 0%, transparent 100%);
+  /* FF3.6-15 */
+  background: -webkit-linear-gradient(top, #56acdc 0%, transparent 100%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom, #56acdc 0%, transparent 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+}
+.container-pratech > .side-bot > .news > .list-news {
+  position: absolute;
+  width: 100%;
+  top: 50%;
+  transform: translateY(-50%);
+  list-style-type: none;
+  overflow: auto;
+  margin: 0;
+  padding: 100px 50px;
+  height: auto;
+  max-height: 100%;
+  /* Tamaño del scroll */
+  /* Estilos barra (thumb) de scroll */
+  /* Estilos track de scroll */
+}
+.container-pratech > .side-bot > .news > .list-news > li {
+  width: 100%;
+  height: auto;
+  margin-bottom: 20px;
+}
+.container-pratech > .side-bot > .news > .list-news > li > a {
+  display: block;
+  width: 100%;
+  height: auto;
+  padding: 15px;
+  border-radius: 5px;
+  background-color: rgba(0, 0, 0, 0.1);
+  position: relative;
+  transition: all 0.2s;
+}
+.container-pratech > .side-bot > .news > .list-news > li > a > .badge {
+  background-color: #fbf60c;
+  color: #145a82;
+  border-radius: 20px;
+  margin-bottom: 15px;
+  font-size: 12px;
+  text-transform: uppercase;
+  text-shadow: none;
+  padding: 5px 10px;
+}
+.container-pratech > .side-bot > .news > .list-news > li > a > .fa {
+  font-size: 30px;
+  color: #fff;
+  display: block;
+  position: absolute;
+  left: 15px;
+  top: 50px;
+}
+.container-pratech > .side-bot > .news > .list-news > li > a > h4 {
+  font-size: 24px;
+  color: #fff;
+  text-shadow: none;
+  padding-left: 35px;
+  font-weight: 300;
+  line-height: 1.2;
+}
+.container-pratech > .side-bot > .news > .list-news > li > a > h4 > div {
+  font-weight: 200;
+  font-size: 16px;
+  margin-top: 10px;
+  line-height: normal;
+}
+.container-pratech > .side-bot > .news > .list-news > li > a > h4 > div > strong {
+  font-weight: bold;
+}
+.container-pratech > .side-bot > .news > .list-news > li > a:hover {
+  text-decoration: none;
+  background-color: rgba(255, 255, 255, 0.8);
+}
+.container-pratech > .side-bot > .news > .list-news > li > a:hover > .fa, .container-pratech > .side-bot > .news > .list-news > li > a:hover > h4 {
+  color: #838383;
+}
+.container-pratech > .side-bot > .news > .list-news > li:last-child {
+  margin-bottom: 0px;
+}
+.container-pratech > .side-bot > .news > .list-news::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+.container-pratech > .side-bot > .news > .list-news::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+}
+.container-pratech > .side-bot > .news > .list-news::-webkit-scrollbar-thumb:active {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.container-pratech > .side-bot > .news > .list-news::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 0, 0, 0.5);
+  box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.2);
+}
+.container-pratech > .side-bot > .news > .list-news::-webkit-scrollbar-track {
+  background: transparent;
+  border-radius: 4px;
+}
+.container-pratech > .side-bot > .news > .list-news::-webkit-scrollbar-track:hover, .container-pratech > .side-bot > .news > .list-news::-webkit-scrollbar-track:active {
+  background: transparent;
 }
 .container-pratech > .form-bot {
   display: none;

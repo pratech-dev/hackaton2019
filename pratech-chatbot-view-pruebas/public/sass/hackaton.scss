@@ -29,6 +29,7 @@ body{
     > .logo-ulxc{
         width: 200px;
         opacity: .5;
+        z-index: 3;
         position: absolute;
         top: 10px;
         right: 10px;
@@ -170,6 +171,143 @@ body{
                             }
                         }
                     }
+                }
+            }
+        }
+
+        > .news{
+            height: 100%;
+            width: 100%;
+            
+            position: relative;
+
+            &::after,&::before{
+                content: '';
+                display: block;
+                position: absolute;
+                left: 0;
+                width: 100%;
+                pointer-events: none;
+                height: 100px;
+                z-index: 1;
+            }
+            &::before{
+                bottom: 0;
+                background: -moz-linear-gradient(top, transparent 0%, #56acdc 100%); /* FF3.6-15 */
+                background: -webkit-linear-gradient(top, transparent 0%, #56acdc 100%); /* Chrome10-25,Safari5.1-6 */
+                background: linear-gradient(to bottom, transparent 0%, #56acdc 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+            }
+            &::after{
+                top: 0;
+                background: -moz-linear-gradient(top, #56acdc 0%, transparent 100%); /* FF3.6-15 */
+                background: -webkit-linear-gradient(top, #56acdc 0%,transparent 100%); /* Chrome10-25,Safari5.1-6 */
+                background: linear-gradient(to bottom, #56acdc 0%,transparent 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+            }
+
+            > .list-news{
+                position: absolute;
+                width: 100%;
+                top: 50%;
+                transform: translateY(-50%);
+                list-style-type: none;
+                overflow: auto;
+                margin: 0;
+                padding: 100px 50px;
+                height: auto;
+                max-height: 100%;
+
+                > li{
+                    width: 100%;
+                    height: auto;
+                    margin-bottom: 20px;
+                    > a{
+                        display: block;
+                        width: 100%;
+                        height: auto;
+                        padding: 15px;
+                        border-radius: 5px;
+                        background-color: rgba(0, 0, 0, 0.1);
+                        position: relative;
+                        transition: all .2s;
+                        > .badge{
+                            background-color: #fbf60c;
+                            color: #145a82;
+                            border-radius: 20px;
+                            margin-bottom: 15px;
+                            font-size: 12px;
+                            text-transform: uppercase;
+                            text-shadow: none;
+                            padding: 5px 10px;
+                        }
+                        > .fa{
+                            font-size: 30px;
+                            color: $c-white;
+                            display: block;
+                            position: absolute;
+                            left: 15px;
+                            top: 50px;
+                        }
+                        > h4{
+                            font-size: 24px;
+                            color: $c-white;
+                            text-shadow: none;
+                            padding-left: 35px;
+                            font-weight: 300;
+                            line-height: 1.2;
+                            > div{
+                                font-weight: 200;
+                                font-size: 16px;
+                                margin-top: 10px;
+                                line-height: normal;
+                                > strong{
+                                    font-weight: bold;
+                                }
+                            }
+                        }
+
+                        &:hover{
+                            text-decoration: none;
+                            background-color: rgba(255, 255, 255, 0.8);
+                            > .fa, > h4{
+                                color: $c-dark;
+                            }
+                        }
+                    }
+                    &:last-child{
+                        margin-bottom: 0px;
+                    }
+                }
+
+                /* Tamaño del scroll */
+                &::-webkit-scrollbar {
+                    width: 8px;
+                    height: 8px;
+                }
+                
+                /* Estilos barra (thumb) de scroll */
+                &::-webkit-scrollbar-thumb {
+                    background: rgba(0, 0, 0, 0.2);
+                    border-radius: 4px;
+                }
+                
+                &::-webkit-scrollbar-thumb:active {
+                    background-color: rgba(0, 0, 0, 0.5);
+                }
+                
+                &::-webkit-scrollbar-thumb:hover {
+                    background: rgba(0, 0, 0, 0.5);
+                    box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.2);
+                }
+                
+                /* Estilos track de scroll */
+                &::-webkit-scrollbar-track {
+                    background: transparent;
+                    border-radius: 4px;
+                }
+                
+                &::-webkit-scrollbar-track:hover, 
+                &::-webkit-scrollbar-track:active {
+                    background: transparent;
                 }
             }
         }
